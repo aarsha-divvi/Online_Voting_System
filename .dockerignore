@@ -1,0 +1,17 @@
+.git
+.gitignore
+
+frontend/node_modules
+frontend/dist
+frontend/.env
+frontend/.env.*
+
+.gradle
+build
+target
+.idea
+.vscode
+
+src/main/resources/application-local.properties
+
+*.log
