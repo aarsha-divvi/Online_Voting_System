@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import API_URL from "../config/api";
 import { useNavigate } from "react-router-dom";
 
-import LanguageSelector from "../components/LanguageSelector";
+import LanguageSelector from "../Components/LanguageSelector";
 
 import {
     getLanguage,
