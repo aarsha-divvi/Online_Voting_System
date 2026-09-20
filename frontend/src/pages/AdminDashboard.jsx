@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import API_URL from "../config/api";
 import "../styles/admin.css";
 
 function AdminDashboard() {
@@ -124,7 +125,7 @@ function AdminDashboard() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:8080/api/elections/admin/history",
+                `${API_URL}/api/elections/admin/history`,
                 {
                     method: "GET",
                     headers: {
@@ -215,7 +216,7 @@ function AdminDashboard() {
             setError("");
 
             const response = await fetch(
-                "http://localhost:8080/api/elections/admin/dashboard",
+                `${API_URL}/api/elections/admin/dashboard`,
                 {
                     method: "GET",
                     headers: authHeaders()
@@ -283,7 +284,7 @@ function AdminDashboard() {
             }
 
             const response = await fetch(
-                "http://localhost:8080/api/elections/admin",
+                `${API_URL}/api/elections/admin`,
                 {
                     method: "POST",
                     headers: {
@@ -370,8 +371,8 @@ function AdminDashboard() {
             setLoading(true);
 
             const endpoint = active
-                ? `http://localhost:8080/api/elections/admin/${electionId}/deactivate`
-                : `http://localhost:8080/api/elections/admin/${electionId}/activate`;
+                ? `${API_URL}/api/elections/admin/${electionId}/deactivate`
+                : `${API_URL}/api/elections/admin/${electionId}/activate`;
 
             const response = await fetch(
                 endpoint,
@@ -462,7 +463,7 @@ function AdminDashboard() {
             );
 
             const response = await fetch(
-                `http://localhost:8080/api/elections/admin/${electionId}`,
+                `${API_URL}/api/elections/admin/${electionId}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -580,7 +581,7 @@ function AdminDashboard() {
             setError("");
 
             const response = await fetch(
-                `http://localhost:8080/api/candidates/election/${electionId}`,
+                `${API_URL}/api/candidates/election/${electionId}`,
                 {
                     method: "GET",
                     headers: authHeaders()
@@ -675,7 +676,7 @@ function AdminDashboard() {
             );
 
             const response = await fetch(
-                "http://localhost:8080/api/candidates/admin",
+                `${API_URL}/api/candidates/admin`,
                 {
                     method: "POST",
                     headers: {
@@ -800,7 +801,7 @@ function AdminDashboard() {
             setLoading(true);
 
             const response = await fetch(
-                `http://localhost:8080/api/candidates/admin/${candidateId}`,
+                `${API_URL}/api/candidates/admin/${candidateId}`,
                 {
                     method: "PUT",
                     headers: authHeaders(),
@@ -866,7 +867,7 @@ function AdminDashboard() {
             setLoading(true);
 
             const response = await fetch(
-                `http://localhost:8080/api/candidates/admin/${candidateId}`,
+                `${API_URL}/api/candidates/admin/${candidateId}`,
                 {
                     method: "DELETE",
                     headers: authHeaders()
@@ -949,7 +950,7 @@ function AdminDashboard() {
             setAdminLoading(true);
 
             const response = await fetch(
-                "http://localhost:8080/api/admin/users",
+                `${API_URL}/api/admin/users`,
                 {
                     method: "POST",
                     headers: authHeaders(),

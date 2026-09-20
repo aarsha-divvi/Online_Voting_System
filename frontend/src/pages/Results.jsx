@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "../styles/results.css";
-
+import API_URL from "../config/api";
 function Results() {
     const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ function Results() {
             setError("");
 
             const response = await fetch(
-                "http://localhost:8080/api/elections",
+                `${API_URL}/api/elections`,
                 {
                     headers: {
                         Authorization:
@@ -137,7 +137,7 @@ function Results() {
             setError("");
 
             const response = await fetch(
-                `http://localhost:8080/api/results/election/${electionId}`,
+                `${API_URL}/api/results/election/${electionId}`,
                 {
                     headers: {
                         Authorization:

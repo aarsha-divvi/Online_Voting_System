@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import API_URL from "../config/api";
 import {
     getLanguage,
     getTranslation
@@ -110,7 +110,7 @@ function Dashboard() {
         try {
             const response =
                 await fetch(
-                    "http://localhost:8080/api/elections",
+                    `${API_URL}/api/elections`,
                     {
                         method: "GET",
                         headers: {
@@ -215,7 +215,7 @@ function Dashboard() {
         try {
             const response =
                 await fetch(
-                    `http://localhost:8080/api/votes/status/${electionId}`,
+                    `${API_URL}/api/votes/status/${electionId}`,
                     {
                         method: "GET",
                         headers: {
@@ -304,7 +304,7 @@ function Dashboard() {
         try {
             const response =
                 await fetch(
-                    `http://localhost:8080/api/candidates/election/${electionId}`,
+                    `${API_URL}/api/candidates/election/${electionId}`,
                     {
                         method: "GET",
                         headers: {
@@ -499,7 +499,7 @@ function Dashboard() {
         try {
             const response =
                 await fetch(
-                    "http://localhost:8080/api/votes",
+                    `${API_URL}/api/votes`,
                     {
                         method: "POST",
                         headers: {
