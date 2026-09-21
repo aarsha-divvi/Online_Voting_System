@@ -1,15 +1,27 @@
 # Online Voting System
 
-A full-stack web-based Online Voting System designed to provide a secure, role-based, and user-friendly platform for managing elections, registering voters, managing candidates, casting votes, and viewing election results.
-The application is built using React + Vite for the frontend and Spring Boot for the backend, with MySQL for persistent data storage and JWT-based authentication for securing protected resources.
+A full-stack web-based **Online Voting System** designed to provide a secure, role-based, and user-friendly platform for managing elections, registering voters, managing candidates, casting votes, and viewing election results.
+The application is built using **React + Vite** for the frontend and **Spring Boot** for the backend, with **MySQL** for persistent data storage and **JWT-based authentication** for securing protected resources.
+---
+## 🌐 Live Application
+### Live Demo
+**[Open Online Voting System](https://online-voting-system-mirf-beta.vercel.app)**
 
-## Features
+## 📌 Project Overview
+The Online Voting System provides a digital platform for conducting elections through a web application.
+The system provides separate functionalities for **voters** and **administrators**. Voters can register, authenticate themselves, view available elections, view candidates, cast votes, and view election results.
+Administrators can manage elections, candidates, users, election status, and voting-related information through protected administrative functionality.
+
+---
+
+##  Features
 
 ### Voter Features
 - Voter registration and login
 - JWT-based authentication
 - Secure access to protected voter pages
 - View available elections
+- View election details
 - View election candidates
 - Cast votes in active elections
 - View election results
@@ -20,29 +32,30 @@ The application is built using React + Vite for the frontend and Spring Boot for
 - Admin dashboard
 - Create and manage elections
 - Manage candidates
-- Manage election status
+- Activate and deactivate elections
+- Manage users
 - Monitor voting-related data
 - View election results
 - Role-based access control for administrative operations
 
-### Security
+### Security Features
 - Spring Security integration
 - JWT-based authentication and authorization
+- BCrypt password encryption
 - Protected API endpoints
 - Role-based access control
+- Stateless authentication
+- CORS configuration for the deployed frontend
 - Sensitive configuration managed through environment variables
 - Database credentials kept outside the source code
-
----
-
+  
 ## Tech Stack
-
 ### Frontend
 - React
 - Vite
 - JavaScript
 - HTML
-- CSS3
+- CSS
 - Fetch API
 
 ### Backend
@@ -56,10 +69,11 @@ The application is built using React + Vite for the frontend and Spring Boot for
 
 ### Database
 - MySQL
+- Aiven MySQL
 
-### Deployment
-- Frontend: Vercel
-- Backend: Render
-- Database: Aiven MySQL
-- Containerization: Docker
-- Source Control: Git & GitHub
+### Deployment & Tools
+- Vercel – Frontend Deployment
+- Render – Backend Deployment
+- Docker – Containerization
+- Git & GitHub – Version Control
+- IntelliJ IDEA – Backend Development
